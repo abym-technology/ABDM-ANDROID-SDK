@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="5dp"
+                android:paddingStart="10dp"
+                android:src="@drawable/arrow_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/pt_sans_bold"
+                android:text="@string/create_abha_address"
+                android:textColor="@color/dark_blue"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/image_5" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/et_outline_bg"
+                android:orientation="horizontal"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <EditText
+                    android:id="@+id/etAbhaAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:paddingEnd="10dp"
+                    android:hint="@string/enter_address"
+                    android:layout_toLeftOf="@id/tvPostfix"
+                    android:background="@color/white"
+                    android:fontFamily="@font/pt_sans_regular"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="16sp"
+                    android:singleLine="true"
+                    android:maxLines="1"/>
+
+                <TextView
+                    android:id="@+id/tvPostfix"
+                    android:textSize="14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/pt_sans_regular"
+                    android:text="@string/abdm" />
+            </RelativeLayout>
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/flexLayout"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:showDivider="middle"
+                app:alignContent="stretch"
+                app:alignItems="stretch"
+                app:dividerDrawable="@drawable/divider"
+                app:flexWrap="wrap">
+                <TextView
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/suggested"
+                    android:fontFamily="@font/pt_sans_regular"
+                    android:textSize="14sp"
+                    android:paddingRight="15dp"/>
+            </com.google.android.flexbox.FlexboxLayout>
+            <TextView
+                android:id="@+id/btnCreateId"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/btn_gray_bg2"
+                android:fontFamily="@font/pt_sans_bold"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/proceed"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:paddingStart="10dp"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/arrow_back"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/abha_creation_text"
+                android:textSize="20sp"
+                android:textColor="@color/dark_blue"
+                android:fontFamily="@font/pt_sans_bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/image1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/create_id_card"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/dark_blue"
+                android:textSize="20sp"
+                android:fontFamily="@font/pt_sans_bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/steps"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:textSize="14sp"
+                android:fontFamily="@font/pt_sans_regular"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btnCreateId"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/btn_blu_bg1"
+            android:text="@string/create_abha_id"
+            android:textColor="@color/white"
+            android:fontFamily="@font/pt_sans_bold"
+            android:textSize="14sp"/>
+    </RelativeLayout>
+</layout>

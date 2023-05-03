@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tv_bg1"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="V.loke4541"
+            android:textColor="@color/text_blue"
+            android:textSize="12sp"
+            android:padding="5dp"
+            android:fontFamily="@font/pt_sans_bold"/>
+    </LinearLayout>
+</layout>

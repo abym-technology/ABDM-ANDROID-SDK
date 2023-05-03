@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".UI.CreateABHAActivity"
+            android:exported="false"
+            android:theme="@style/customTheme"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.AbhaSuccessActivity"
+            android:exported="false"
+            android:theme="@style/customTheme"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.AdharCardVerifyActivity"
+            android:exported="false"
+            android:theme="@style/customTheme"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.ConfirmAdharDetailsActivity"
+            android:exported="false"
+            android:theme="@style/customTheme"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.CreateAbhaAddressActivity"
+            android:exported="false"
+            android:theme="@style/customTheme"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.MobileNumberActivity"
+            android:exported="false"
+            android:theme="@style/customTheme"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.OTPActivity"
+            android:exported="false"
+            android:theme="@style/customTheme"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

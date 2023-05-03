@@ -4,7 +4,6 @@ public interface ApiConstants {
 
     public String BASE_URL_DEV = "http://13.234.94.247:8094";
     public String BASE_URL_LIVE = "http://13.234.94.247:8094";
-
     public String BASEURL_WEBSERVIC = "/api/v1/abha/";
     public String BASEURL_UAT = ApiConstants.BASE_URL_DEV + ApiConstants.BASEURL_WEBSERVIC;
     public String BASEURL_LIVE = ApiConstants.BASE_URL_LIVE + ApiConstants.BASEURL_WEBSERVIC;

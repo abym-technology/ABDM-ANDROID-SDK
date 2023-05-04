@@ -95,7 +95,6 @@ public class CreateAbhaAddressActivity extends AppCompatActivity {
         try {
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("healthId", dataBinding.etAbhaAddress.getText().toString());
-
             UtilityABHA.abhaAPICall(this, null, jsonObject, ApiConstants.CHECK_PHR_AVAIL, new ResponseListener() {
                 @Override
                 public void onSuccess(String response) {

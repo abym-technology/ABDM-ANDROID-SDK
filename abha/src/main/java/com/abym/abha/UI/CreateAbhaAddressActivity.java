@@ -52,7 +52,7 @@ public class CreateAbhaAddressActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (s.length() >= 3) {
+                if (s.length() >= 4) {
                     checkABHAAddress();
                 } else checkEmpty(1);
             }

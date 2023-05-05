@@ -108,7 +108,10 @@ public class OTPActivity extends AppCompatActivity {
         binding.tvResend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                resendAdharOTP();
+                if (type.equalsIgnoreCase("1"))
+                    resendAdharOTP();
+                else
+                   resendMobileOTP();
             }
         });
     }
@@ -241,6 +244,40 @@ public class OTPActivity extends AppCompatActivity {
                 @Override
                 public void onFailure(String response) {
                     ToastUtil.showToastLong(getApplicationContext(), response);
+                }
+            });
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void resendMobileOTP() {
+        try {
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put("mobile", getIntent().getStringExtra(AppConstants.MOBILENO));
+            jsonObject.put("txnId", PreferenceUtil.getStringPrefs(this,PreferenceUtil.TXNID,""));
+
+            UtilityABHA.abhaAPICall(this,  binding.rlProgress, jsonObject, ApiConstants.MOBILE_OTP, new ResponseListener() {
+                @Override
+                public void onSuccess(String response) {
+                    try {
+                        JSONObject jsonObject1 = new JSONObject(response);
+                        if (jsonObject1.optString("status").equalsIgnoreCase("true")) {
+                            JSONObject jsonObject2 = jsonObject1.optJSONObject("result");
+                            String txnId = jsonObject2.optString("txnId");
+                            PreferenceUtil.setStringPrefs(getApplicationContext(), PreferenceUtil.TXNID, txnId);
+                            ToastUtil.showToastLong(getApplicationContext(), getString(R.string.otpresent));
+                            OTPTimer();
+                        } else
+                            ToastUtil.showToastLong(getApplicationContext(), jsonObject1.optString("message"));
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+
+                @Override
+                public void onFailure(String response) {
+                    ToastUtil.showToastLong(getApplicationContext(),response);
                 }
             });
         } catch (Exception e) {
